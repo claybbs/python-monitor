@@ -57,7 +57,7 @@ def send_mail():
 	    smtp = smtplib.SMTP_SSL()
         smtp2 = smtplib.SMTP
         smtp.connect('smtp.exmail.qq.com:465')
-        smtp.login('alert@lwork.com', 'leanwork123')
+        smtp.login('tss@lwork.com', 'abc123')
         smtp.sendmail(From,List,msg.as_string())
         smtp.quit()
         status.append('ok')
