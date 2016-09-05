@@ -26,13 +26,13 @@ def send_mail(From,to,messages):
     smtp = smtplib.SMTP_SSL()
     try:
         smtp.connect('smtp.exmail.qq.com:465')
-        smtp.login('alert@lwork.com', 'leanwork123')
+        smtp.login('tss@lwork.com', 'abc123')
         smtp.sendmail(From, to, msg.as_string())
         smtp.quit()
     except Exception,e:
         print e
 
 if __name__ == '__main__':
-        From = 'alert@lwork.com'
+        From = 'tss@lwork.com'
         to = 'clay@lwork.com'
         send_mail(From,to,'tencent send SSL mail test')
