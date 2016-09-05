@@ -50,7 +50,7 @@ def updata(status):
 	]
     print payload
 
-    r = requests.post("http://203.88.167.42:1988/v1/push", data=json.dumps(payload))
+    r = requests.post("http://127.0.0.1:1988/v1/push", data=json.dumps(payload))
 
     print r.text
 
@@ -63,5 +63,5 @@ if __name__ == '__main__':
         temp = cf.items("ports")
         for tuple in temp:
             PORT = tuple[1]
-            status = bridgecheck('23.91.98.128',int(PORT))
+            status = bridgecheck('127.0.0.1',int(PORT))
 	    updata(status)
