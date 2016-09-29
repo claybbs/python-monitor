@@ -6,9 +6,9 @@ import yaml
 import requests
 import json
 
-IP = '47.90.52.78'
+IP = '127.0.0.1'
 PORT = 10801
-URL = 'http://47.90.52.78:10800'
+URL = 'http://127.0.0.1:10800'
 
 hostname = socket.gethostname()
 PORT = 80
@@ -26,7 +26,7 @@ def updata(servername,status):
 	        "counterType": "GAUGE",
 	        "tags": "portcheck,project=feedwork",
 	    },
-	
+
 	]
 	print payload
 	r = requests.post("http://127.0.0.1:1988/v1/push", data=json.dumps(payload))
